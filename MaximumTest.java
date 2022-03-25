@@ -1,21 +1,21 @@
 package com.Bridgelabz.Generic;
 
 public class MaximumTest {
-		Integer x, y, z;
+		Float x, y, z;
 	
-	public MaximumTest(Integer x, Integer y, Integer z) {
+	public MaximumTest(Float x, Float y, Float z) {
 		super();
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 	
-	public Integer maximum() {
+	public Float maximum() {
 		return MaximumTest.maximum(x, y, z);
 	}
 	
-	public static Integer maximum(Integer x, Integer y, Integer z) {
-		Integer max = x;
+	public static Float maximum(Float x, Float y, Float z) {
+		Float max = x;
 		if(y.compareTo(max)>0) {
 			max = y;
 		}
@@ -26,8 +26,8 @@ public class MaximumTest {
 		return max;
 	}
 	
-	public static Integer testMaximum(Integer x, Integer y, Integer z) {
-		Integer max = x;
+	public static Float testMaximum(Float x, Float y, Float z) {
+		Float max = x;
 		if(y.compareTo(max)>0) {
 			max = y;
 		}
@@ -38,14 +38,14 @@ public class MaximumTest {
 		return max;
 	}
 	
-	public static void printMax(Integer x, Integer y, Integer z, Integer max) {
+	public static void printMax(Float x, Float y, Float z, Float max) {
 		System.out.println(x +" "+ y +" "+ z + "\nMaximum no is : "+ max);
 	}
 	
 	public static void main(String[] args) {
-		Integer xInt = 4, yInt = 6, zInt = 7;
+		Float xFlt = 4.4f, yFlt = 6.6f, zFlt = 7.7f;
 		
-		MaximumTest.testMaximum(xInt, yInt, zInt);
-		new MaximumTest(xInt, yInt, zInt).maximum();
+		MaximumTest.testMaximum(xFlt, yFlt, zFlt);
+		new MaximumTest(xFlt, yFlt, zFlt).maximum();
 	}
 }
